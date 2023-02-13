@@ -1,0 +1,36 @@
+extends layout.pug
+
+block content
+  a(href="/") Back
+  h1= title + " v11 REST API"
+  h2= "Overview of steps involved with SugarCRM's API"
+  ul
+    li First we need to Authenticate and receive an access token.
+    li After receiving access token, we can use it to make API calls.
+    li Some calls themselves are multistep processes.
+  h2= "Authentication Parameters"
+  table
+    tr
+      th Parameter
+      th Value
+    tr
+      td "grant_type" :
+      td "password"
+    tr
+      td "client_id" :
+      td "sugar"
+    tr
+      td "client_secret" :
+      td "secret"
+    tr
+      td "username" :
+      td "admin"
+    tr
+      td "password" :
+      td "password"
+    tr
+      td "platform" :
+      td "custom_api"
+  p NOTE: The "platform" parameter is used to autheticate a user to a specific platform. 
+    br 
+    | Sugar only allows 1 user in the system at a time per platform, autheticating an integrations script with a platform type of "base" will logout any current users in the system using those credentials.

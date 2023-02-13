@@ -1,0 +1,10 @@
+html
+  head
+    title= title
+  body
+    h1= title 
+    p= message
+    ul 
+      each crm in crmList
+        li
+          a(href=crm.url)= crm.name
