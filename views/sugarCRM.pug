@@ -5,9 +5,12 @@ block content
   h1= title + " v11 REST API"
   h2= "Overview of steps involved with SugarCRM's API"
   ul
-    li First we need to Authenticate and receive an access token.
+    li SugarCRM uses OAuth2, so we need to first Authenticate and receive an access token to make API calls passing in the access token.
     li After receiving access token, we can use it to make API calls.
     li Some calls themselves are multistep processes.
+    li Responses are in JSON format.
+    li All endpoints are listed 
+      a(href="https://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_12.3/Cookbook/Web_Services/REST_API/Bash/" target="_blank") here
   h2= "Authentication Parameters"
   table
     tr
